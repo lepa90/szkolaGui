@@ -1,0 +1,47 @@
+import tkinter
+import time
+import tkinter.messagebox
+
+top = tkinter.Tk()
+def wcisniecie():
+    tkinter.messagebox.showinfo('Warning')
+
+przycisk = tkinter.Button(top, text = 'hello', command=wcisniecie);
+
+
+
+
+
+l1 = tkinter.Label(top, text='imie')
+l2 = tkinter.Label(top, text='nazwisko')
+l3 = tkinter.Label(top, text='wiek')
+
+
+l1.grid(row=0,column=0)
+l2.grid(row=1,column=0)
+l3.grid(row=2,column=0)
+
+e1= tkinter.Entry()
+e2= tkinter.Entry()
+e3= tkinter.Entry()
+
+
+e1.grid(row=0,column=1)
+e2.grid(row=1,column=1)
+e3.grid(row=2,column=1)
+
+C1Var=tkinter.IntVar()
+C2Var=tkinter.IntVar()
+
+c1=tkinter.Checkbutton(top, text = 'Kobieta', onvalue = 100, offvalue = 50, variable=C1Var)
+c2=tkinter.Checkbutton(top, text = 'Kobieta', onvalue = 1, offvalue = 0, variable=C2Var)
+
+r1 = tkinter.Radiobutton(top, text='re', )
+c1.grid(row=3,column=0)
+c2.grid(row=3,column=1)
+top.mainloop()
+print(C1Var.get())
+
+
+
+
